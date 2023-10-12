@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		804D99C02AD884CC00EE1DBB /* Natife_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99BF2AD884CC00EE1DBB /* Natife_TestApp.swift */; };
-		804D99C22AD884CC00EE1DBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99C12AD884CC00EE1DBB /* ContentView.swift */; };
+		804D99C22AD884CC00EE1DBB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99C12AD884CC00EE1DBB /* MainView.swift */; };
 		804D99C42AD884CE00EE1DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804D99C32AD884CE00EE1DBB /* Assets.xcassets */; };
 		804D99C72AD884CE00EE1DBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804D99C62AD884CE00EE1DBB /* Preview Assets.xcassets */; };
 		804D99CF2AD8850300EE1DBB /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99CE2AD8850300EE1DBB /* PostModel.swift */; };
 		804D99D12AD8851400EE1DBB /* MultiplePostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D02AD8851400EE1DBB /* MultiplePostsModel.swift */; };
 		804D99D42AD8856C00EE1DBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D32AD8856C00EE1DBB /* NetworkManager.swift */; };
+		804D99D72AD885AB00EE1DBB /* PostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D62AD885AB00EE1DBB /* PostCellView.swift */; };
+		804D99D92AD8889F00EE1DBB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D82AD8889F00EE1DBB /* ViewModel.swift */; };
+		804D99DB2AD88FF700EE1DBB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99DA2AD88FF700EE1DBB /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		804D99BC2AD884CC00EE1DBB /* Natife-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Natife-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		804D99BF2AD884CC00EE1DBB /* Natife_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natife_TestApp.swift; sourceTree = "<group>"; };
-		804D99C12AD884CC00EE1DBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		804D99C12AD884CC00EE1DBB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		804D99C32AD884CE00EE1DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		804D99C62AD884CE00EE1DBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		804D99CE2AD8850300EE1DBB /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		804D99D02AD8851400EE1DBB /* MultiplePostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePostsModel.swift; sourceTree = "<group>"; };
 		804D99D32AD8856C00EE1DBB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		804D99D62AD885AB00EE1DBB /* PostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellView.swift; sourceTree = "<group>"; };
+		804D99D82AD8889F00EE1DBB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		804D99DA2AD88FF700EE1DBB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,14 @@
 		804D99BE2AD884CC00EE1DBB /* Natife-Test */ = {
 			isa = PBXGroup;
 			children = (
+				804D99D52AD8859500EE1DBB /* Views */,
 				804D99D22AD8855F00EE1DBB /* Managers */,
 				804D99CD2AD884DF00EE1DBB /* Models */,
 				804D99BF2AD884CC00EE1DBB /* Natife_TestApp.swift */,
-				804D99C12AD884CC00EE1DBB /* ContentView.swift */,
+				804D99C12AD884CC00EE1DBB /* MainView.swift */,
 				804D99C32AD884CE00EE1DBB /* Assets.xcassets */,
 				804D99C52AD884CE00EE1DBB /* Preview Content */,
+				804D99D82AD8889F00EE1DBB /* ViewModel.swift */,
 			);
 			path = "Natife-Test";
 			sourceTree = "<group>";
@@ -90,6 +98,15 @@
 				804D99D32AD8856C00EE1DBB /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		804D99D52AD8859500EE1DBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				804D99D62AD885AB00EE1DBB /* PostCellView.swift */,
+				804D99DA2AD88FF700EE1DBB /* DetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,11 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				804D99C22AD884CC00EE1DBB /* ContentView.swift in Sources */,
+				804D99D72AD885AB00EE1DBB /* PostCellView.swift in Sources */,
+				804D99DB2AD88FF700EE1DBB /* DetailView.swift in Sources */,
+				804D99C22AD884CC00EE1DBB /* MainView.swift in Sources */,
 				804D99D12AD8851400EE1DBB /* MultiplePostsModel.swift in Sources */,
 				804D99D42AD8856C00EE1DBB /* NetworkManager.swift in Sources */,
 				804D99CF2AD8850300EE1DBB /* PostModel.swift in Sources */,
 				804D99C02AD884CC00EE1DBB /* Natife_TestApp.swift in Sources */,
+				804D99D92AD8889F00EE1DBB /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +326,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,9 +335,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.VolodymyrVolynets.Natife-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,8 +357,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,9 +366,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.VolodymyrVolynets.Natife-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

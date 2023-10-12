@@ -11,7 +11,7 @@ import SwiftUI
 struct Natife_TestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
