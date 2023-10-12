@@ -22,6 +22,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ScrollView() {
+                NavigationLink("", destination: DetailView(viewModel: DetailViewModel(postId: viewModel.detailedPostId)), isActive: $viewModel.showDetailed)
                 ForEach(viewModel.posts, id:\.self) { post in
                     PostCellView(post: post)
                         .onTapGesture {
@@ -41,7 +42,6 @@ struct MainView: View {
                     }
                 }
             }
-            NavigationLink("", destination: DetailView(id: viewModel.detailedPostId), isActive: $viewModel.showDetailed)
         }
         .padding()
     }

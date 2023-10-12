@@ -8,12 +8,34 @@
 import SwiftUI
 
 struct DetailView: View {
-    let id: Int
+    @StateObject var viewModel: DetailViewModel
     var body: some View {
-        Text("Hello, World! \(id)")
+        if viewModel.isLoading {
+            Text("Loading...")
+        } else {
+            ScrollView {
+                Image(systemName: "clock")
+                    .data(url: URL(string: viewModel.post?.postImage ?? "")!)
+                    .scaledToFit()
+                
+                Text(viewModel.post?.title ?? "Error")
+                    .fontWeight(.bold)
+                
+                Text(viewModel.post?.text ?? "Error")
+                
+                HStack {
+                    LikesCounter(likesCount: viewModel.post?.likesCount ?? -1)
+                    
+                    Spacer()
+                    
+                    Text(viewModel.post?.date.stringDate ?? "00/00/0000")
+                }
+            }
+            .navigationTitle("Title")
+        }
     }
 }
 
 #Preview {
-    DetailView(id: 1)
+    DetailView(viewModel: DetailViewModel(postId: 111))
 }

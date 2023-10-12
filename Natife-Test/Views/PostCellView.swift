@@ -9,11 +9,6 @@ import SwiftUI
 
 struct PostCellView: View {
     let post: PostModel
-    var stringDate: String {
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "dd/MM/YYYY"
-        return dateFormater.string(from: post.date)
-    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,15 +17,11 @@ struct PostCellView: View {
             Text(post.previewText)
                 .lineLimit(2)
             HStack {
-                HStack(spacing: 3) {
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                    Text("\(post.likesCount)")
-                }
+                LikesCounter(likesCount: post.likesCount)
                 
                 Spacer()
                 
-                Text(stringDate)
+                Text(post.date.stringDate)
             }
         }
     }

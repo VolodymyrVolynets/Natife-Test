@@ -17,6 +17,11 @@
 		804D99D72AD885AB00EE1DBB /* PostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D62AD885AB00EE1DBB /* PostCellView.swift */; };
 		804D99D92AD8889F00EE1DBB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D82AD8889F00EE1DBB /* ViewModel.swift */; };
 		804D99DB2AD88FF700EE1DBB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99DA2AD88FF700EE1DBB /* DetailView.swift */; };
+		804D99DE2AD892BE00EE1DBB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99DD2AD892BE00EE1DBB /* DetailViewModel.swift */; };
+		804D99E12AD8930800EE1DBB /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99E02AD8930800EE1DBB /* ImageExtension.swift */; };
+		804D99E32AD8936B00EE1DBB /* DetailPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99E22AD8936B00EE1DBB /* DetailPostModel.swift */; };
+		804D99E52AD8973400EE1DBB /* LikesCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99E42AD8973400EE1DBB /* LikesCounter.swift */; };
+		804D99E72AD897C600EE1DBB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99E62AD897C600EE1DBB /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		804D99D62AD885AB00EE1DBB /* PostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellView.swift; sourceTree = "<group>"; };
 		804D99D82AD8889F00EE1DBB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		804D99DA2AD88FF700EE1DBB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		804D99DD2AD892BE00EE1DBB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		804D99E02AD8930800EE1DBB /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		804D99E22AD8936B00EE1DBB /* DetailPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostModel.swift; sourceTree = "<group>"; };
+		804D99E42AD8973400EE1DBB /* LikesCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCounter.swift; sourceTree = "<group>"; };
+		804D99E62AD897C600EE1DBB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,14 +73,14 @@
 		804D99BE2AD884CC00EE1DBB /* Natife-Test */ = {
 			isa = PBXGroup;
 			children = (
+				804D99DF2AD892FA00EE1DBB /* Extensions */,
+				804D99DC2AD892AC00EE1DBB /* ViewModels */,
 				804D99D52AD8859500EE1DBB /* Views */,
 				804D99D22AD8855F00EE1DBB /* Managers */,
 				804D99CD2AD884DF00EE1DBB /* Models */,
 				804D99BF2AD884CC00EE1DBB /* Natife_TestApp.swift */,
-				804D99C12AD884CC00EE1DBB /* MainView.swift */,
 				804D99C32AD884CE00EE1DBB /* Assets.xcassets */,
 				804D99C52AD884CE00EE1DBB /* Preview Content */,
-				804D99D82AD8889F00EE1DBB /* ViewModel.swift */,
 			);
 			path = "Natife-Test";
 			sourceTree = "<group>";
@@ -88,6 +98,7 @@
 			children = (
 				804D99CE2AD8850300EE1DBB /* PostModel.swift */,
 				804D99D02AD8851400EE1DBB /* MultiplePostsModel.swift */,
+				804D99E22AD8936B00EE1DBB /* DetailPostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,10 +114,30 @@
 		804D99D52AD8859500EE1DBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				804D99C12AD884CC00EE1DBB /* MainView.swift */,
 				804D99D62AD885AB00EE1DBB /* PostCellView.swift */,
 				804D99DA2AD88FF700EE1DBB /* DetailView.swift */,
+				804D99E42AD8973400EE1DBB /* LikesCounter.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		804D99DC2AD892AC00EE1DBB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				804D99D82AD8889F00EE1DBB /* ViewModel.swift */,
+				804D99DD2AD892BE00EE1DBB /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		804D99DF2AD892FA00EE1DBB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				804D99E02AD8930800EE1DBB /* ImageExtension.swift */,
+				804D99E62AD897C600EE1DBB /* DateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				804D99D72AD885AB00EE1DBB /* PostCellView.swift in Sources */,
+				804D99E52AD8973400EE1DBB /* LikesCounter.swift in Sources */,
+				804D99E32AD8936B00EE1DBB /* DetailPostModel.swift in Sources */,
 				804D99DB2AD88FF700EE1DBB /* DetailView.swift in Sources */,
 				804D99C22AD884CC00EE1DBB /* MainView.swift in Sources */,
+				804D99E72AD897C600EE1DBB /* DateExtension.swift in Sources */,
+				804D99E12AD8930800EE1DBB /* ImageExtension.swift in Sources */,
 				804D99D12AD8851400EE1DBB /* MultiplePostsModel.swift in Sources */,
+				804D99DE2AD892BE00EE1DBB /* DetailViewModel.swift in Sources */,
 				804D99D42AD8856C00EE1DBB /* NetworkManager.swift in Sources */,
 				804D99CF2AD8850300EE1DBB /* PostModel.swift in Sources */,
 				804D99C02AD884CC00EE1DBB /* Natife_TestApp.swift in Sources */,
