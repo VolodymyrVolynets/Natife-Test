@@ -13,6 +13,7 @@
 		804D99C72AD884CE00EE1DBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804D99C62AD884CE00EE1DBB /* Preview Assets.xcassets */; };
 		804D99CF2AD8850300EE1DBB /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99CE2AD8850300EE1DBB /* PostModel.swift */; };
 		804D99D12AD8851400EE1DBB /* MultiplePostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D02AD8851400EE1DBB /* MultiplePostsModel.swift */; };
+		804D99D42AD8856C00EE1DBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D99D32AD8856C00EE1DBB /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		804D99C62AD884CE00EE1DBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		804D99CE2AD8850300EE1DBB /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		804D99D02AD8851400EE1DBB /* MultiplePostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePostsModel.swift; sourceTree = "<group>"; };
+		804D99D32AD8856C00EE1DBB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		804D99BE2AD884CC00EE1DBB /* Natife-Test */ = {
 			isa = PBXGroup;
 			children = (
+				804D99D22AD8855F00EE1DBB /* Managers */,
 				804D99CD2AD884DF00EE1DBB /* Models */,
 				804D99BF2AD884CC00EE1DBB /* Natife_TestApp.swift */,
 				804D99C12AD884CC00EE1DBB /* ContentView.swift */,
@@ -79,6 +82,14 @@
 				804D99D02AD8851400EE1DBB /* MultiplePostsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		804D99D22AD8855F00EE1DBB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				804D99D32AD8856C00EE1DBB /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 			files = (
 				804D99C22AD884CC00EE1DBB /* ContentView.swift in Sources */,
 				804D99D12AD8851400EE1DBB /* MultiplePostsModel.swift in Sources */,
+				804D99D42AD8856C00EE1DBB /* NetworkManager.swift in Sources */,
 				804D99CF2AD8850300EE1DBB /* PostModel.swift in Sources */,
 				804D99C02AD884CC00EE1DBB /* Natife_TestApp.swift in Sources */,
 			);
