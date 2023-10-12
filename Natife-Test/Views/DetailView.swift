@@ -14,8 +14,7 @@ struct DetailView: View {
             Text("Loading...")
         } else {
             ScrollView {
-                Image(systemName: "clock")
-                    .data(url: URL(string: viewModel.post?.postImage ?? "")!)
+                AsyncImage(url: URL(string: viewModel.post?.postImage ?? "")!)
                     .scaledToFit()
                 
                 Text(viewModel.post?.title ?? "Error")
