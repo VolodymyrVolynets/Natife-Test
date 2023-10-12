@@ -9,19 +9,36 @@ import SwiftUI
 
 struct PostCellView: View {
     let post: PostModel
+    @State var isShowMore = false
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(post.title)
                 .fontWeight(.medium)
             Text(post.previewText)
-                .lineLimit(2)
+                .lineLimit(isShowMore ? nil : 2)
             HStack {
                 LikesCounter(likesCount: post.likesCount)
                 
                 Spacer()
                 
                 Text(post.date.stringDate)
+            }
+            if (post.previewText.count >= 80) {
+                Button {
+                    withAnimation() {
+                        isShowMore.toggle()
+                    }
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 15)
+                            .foregroundColor(.blue)
+                            .frame(height: 35)
+                        Text(isShowMore ? "Hide" : "Show More")
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                    }
+                }
             }
         }
     }

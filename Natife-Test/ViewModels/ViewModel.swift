@@ -23,7 +23,6 @@ class MainViewModel: ObservableObject {
             case .success(let multiplePosts):
                 DispatchQueue.main.async {
                     self.posts = multiplePosts.posts
-                    print(self.posts)
                 }
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
@@ -34,13 +33,15 @@ class MainViewModel: ObservableObject {
     public func sortButtonPressed() {
         sortType = sortType.next()
         
-        switch(sortType) {
-        case .none:
-            posts.sort(by: {$0.postId < $1.postId})
-        case .date:
-            posts.sort(by: {$0.date.timeIntervalSince1970 > $1.date.timeIntervalSince1970})
-        case .likes:
-            posts.sort(by: {$0.likesCount > $1.likesCount})
+        withAnimation() {
+            switch(sortType) {
+            case .none:
+                posts.sort(by: {$0.postId < $1.postId})
+            case .date:
+                posts.sort(by: {$0.date.timeIntervalSince1970 > $1.date.timeIntervalSince1970})
+            case .likes:
+                posts.sort(by: {$0.likesCount > $1.likesCount})
+            }
         }
     }
     
